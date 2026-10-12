@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key><string>en</string>
+	<key>CFBundleExecutable</key><string>Fieldwatch</string>
+	<key>CFBundleIconFile</key><string>AppIcon</string>
+	<key>CFBundleIdentifier</key><string>app.fieldwatch.mac</string>
+	<key>CFBundleInfoDictionaryVersion</key><string>6.0</string>
+	<key>CFBundleName</key><string>Fieldwatch</string>
+	<key>CFBundleDisplayName</key><string>Fieldwatch</string>
+	<key>CFBundlePackageType</key><string>APPL</string>
+	<key>CFBundleShortVersionString</key><string>1.1.25</string>
+	<key>CFBundleVersion</key><string>35</string>
+	<key>LSMinimumSystemVersion</key><string>14.0</string>
+	<key>LSApplicationCategoryType</key><string>public.app-category.utilities</string>
+	<key>NSHighResolutionCapable</key><true/>
+	<key>NSHumanReadableCopyright</key><string>Copyright © 2026 Off Grid Pete LLC. MIT License. macOS port.</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Fieldwatch listens for Bluetooth LE advertisements that nearby devices broadcast. It never connects to them.</string>
+	<key>NSLocationUsageDescription</key>
+	<string>macOS only reveals Wi-Fi network names and BSSIDs to apps with Location access. Fieldwatch can also stamp sightings with this Mac's position; nothing leaves the Mac unless you export it.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>macOS only reveals Wi-Fi network names and BSSIDs to apps with Location access. Fieldwatch can also stamp sightings with this Mac's position; nothing leaves the Mac unless you export it.</string>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>The optional TAK / Cursor-on-Target feed sends map markers to the address you configure on your local network.</string>
+	<key>NSUserNotificationsUsageDescription</key>
+	<string>Optional watchlist alerts as notification banners.</string>
+</dict>
+</plist>
