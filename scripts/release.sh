@@ -31,12 +31,12 @@ notarize() {
   local file="$1"
   echo "› notarize $(basename "$file") (this can take a few minutes)"
   xcrun notarytool submit "$file" --keychain-profile "$NOTARY_PROFILE" --wait --output-format json > "$OUT/notary.json" || true
-  local status="$(/usr/bin/plutil -extract status raw "$OUT/notary.json" 2>/dev/null || echo unknown)"
-  if [[ "$status" != "Accepted" ]]; then
+  local result="$(/usr/bin/plutil -extract status raw "$OUT/notary.json" 2>/dev/null || echo unknown)"
+  if [[ "$result" != "Accepted" ]]; then
     cat "$OUT/notary.json" >&2
     local id="$(/usr/bin/plutil -extract id raw "$OUT/notary.json" 2>/dev/null || true)"
     [[ -n "$id" ]] && xcrun notarytool log "$id" --keychain-profile "$NOTARY_PROFILE" >&2 || true
-    echo "Notarization failed: $status" >&2
+    echo "Notarization failed: $result" >&2
     exit 1
   fi
 }
